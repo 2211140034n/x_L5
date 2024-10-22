@@ -1,0 +1,8 @@
+<%= form_with model: User do |f| %>
+    <%= f.label :uid, 'UID' %>
+    <%= f.text_field :uid %>
+    <%= f.label :pass, 'パスワード' %>
+    <%= f.password_field :pass %>
+    <%= f.submit '登録' %>
+    
+<% end %>
