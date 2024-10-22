@@ -1,3 +1,10 @@
+<%= form_with model: @tweet, local: true do |f| %>
+  <%= f.label :message, 'Message' %>
+  <%= f.text_field :message %>
+  <%= f.submit 'ツイート' %>
+<% end %>
+
+
 <% @tweets.each do |e| %>
   <%= e.message %>
   (<%= e.user_id %>)
