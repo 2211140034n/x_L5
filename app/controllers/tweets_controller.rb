@@ -1,17 +1,17 @@
 class TweetsController < ApplicationController
     def index
-        @tweets=Tweet.all.includes(:user)
+        @tweets = Tweet.all.includes(:user)
     end
-
+    
     def new
-        @tweet=Tweet.new
+        @tweet = Tweet.new
     end
+    
     def create
-        t=Tweet.new(message: params[:tweet][:message])
-        t.user=User.find_by(uid: session[:login_uid])
+        t = Tweet.new(message: params[:tweet][:message])
+        t.user = User.find_by(uid: session[:login_uid])
         t.save
         redirect_to tweets_path
-      
     end
       
     def destroy
