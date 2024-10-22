@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :tweets
   resources :likes
   
-  get 'top/main'
+  get 'top/main', as: 'main'  # 名前付きルートを設定
+  
   post 'top/login'
   get 'top/logout'
   
