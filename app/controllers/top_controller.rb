@@ -31,8 +31,7 @@ class TopController < ApplicationController
         user=User.find_by(uid: params[:uid])
         if user && BCrypt::Password.new(user.pass) == params[:pass] 
            session[:login_uid]=params[:uid]
-            redirect_to root_path
-        else
+            redirect_to tweets_path
             render "error", status: 422
         end
     end
