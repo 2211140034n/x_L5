@@ -2,15 +2,24 @@
 <html>
   <head>
     <title>L5</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSRF対策用メタタグ -->
     <%= csrf_meta_tags %>
+    
+    <!-- コンテンツセキュリティポリシーのメタタグ -->
     <%= csp_meta_tag %>
 
+    <!-- スタイルシートのリンク -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+    <!-- JavaScriptのインポートマップ -->
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <!-- 各ビューの内容がここに挿入される -->
     <%= yield %>
   </body>
 </html>
+
