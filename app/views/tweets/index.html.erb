@@ -4,7 +4,7 @@
   <%= link_to '削除', tweet_path(e), data: { turbo_method: :delete } %>
   <%= link_to '♡', likes_path(tweet_id: e.id), data: { turbo_method: :post } %>
   <%= link_to '♡削除', like_path(e), data: { turbo_method: :delete } %>
-  <%= e.like_users.include?(User.find(uid: session[:login_uid])) %>
+  <%= e.like_users.include?(User.find_by(uid: session[:login_uid])) %>
   <br>
 <% end %>
 
