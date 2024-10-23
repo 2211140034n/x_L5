@@ -23,10 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_16_070200) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-=======
     t.index ["user_id"], name: "index_tweets_on_user_id"
->>>>>>> aa4e03b (push to render.com)
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,8 +34,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_16_070200) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
-=======
   add_foreign_key "tweets", "users"
->>>>>>> aa4e03b (push to render.com)
 end

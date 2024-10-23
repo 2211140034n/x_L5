@@ -12,8 +12,7 @@ class LikesController < ApplicationController
         #redirect_to root_path
         tweet = Tweet.find(params[:id])
         user = User.find_by(uid: session[:login_uid])
-        like = tweet.likes.find_by(user_id: user.id)
-        like.destroy if like  
+        like = tweet.likes.find_by(user_id: user.id).destroy
         redirect_to root_path
     end
     
